@@ -464,10 +464,14 @@ section{position:relative}
 .flip-face.back .detail-list li{padding-left:20px;position:relative;margin-bottom:9px}
 .flip-face.back .detail-list li::before{content:"";position:absolute;left:0;top:.6em;width:7px;height:7px;border-radius:50%;background:#e85d26}
 /* 数据卡：金色大数字 + 标签 */
-.flip-face.back .go-links{margin:30px 0 6px}
-.flip-face.back .go-links h3{font-size:15px;font-weight:700;letter-spacing:.1em;color:#e85d26;margin:0 0 12px;border-bottom:1px solid rgba(27,35,80,.13);padding-bottom:9px}
-.flip-face.back .go-links a{display:inline-block;margin:0 10px 10px 0;padding:9px 18px;border:1px solid rgba(232,93,38,.45);border-radius:999px;color:#e85d26;font-size:12px;letter-spacing:.04em;text-decoration:none;transition:all .25s}
-.flip-face.back .go-links a:hover{background:#e85d26;color:#fff;transform:translateY(-2px);box-shadow:0 8px 20px rgba(232,93,38,.3)}
+.flip-face.back .go-links{display:grid;grid-template-columns:1fr 1fr;margin:34px 0 10px;border-top:1px solid rgba(27,35,80,.13);border-bottom:1px solid rgba(27,35,80,.13)}
+.flip-face.back .go-links h3{grid-column:1/-1;font-size:15px;font-weight:700;letter-spacing:.1em;color:#e85d26;margin:0;padding:0 0 12px;border-bottom:1px solid rgba(27,35,80,.13)}
+.flip-face.back .go-links a{display:flex;align-items:center;min-height:58px;padding:14px 18px;color:#1b2350;font-size:12px;font-weight:600;letter-spacing:.02em;text-decoration:none;transition:background .22s,color .22s}
+.flip-face.back .go-links a:nth-of-type(odd){border-right:1px solid rgba(27,35,80,.13)}
+.flip-face.back .go-links a:nth-of-type(-n+2){border-bottom:1px solid rgba(27,35,80,.13)}
+.flip-face.back .go-links a:hover{background:rgba(232,93,38,.08);color:#e85d26}
+.flip-face.back .go-links a:focus-visible{outline:2px solid #e85d26;outline-offset:-3px}
+@media(max-width:700px){.flip-face.back .go-links{grid-template-columns:1fr}.flip-face.back .go-links a:nth-of-type(odd){border-right:0}.flip-face.back .go-links a:nth-of-type(-n+3){border-bottom:1px solid rgba(27,35,80,.13)}}
 .flip-face.back .stats,.flip-face.back .data-stage{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;background:none;border:none;margin:30px 0 0;position:static;min-height:0}
 .flip-face.back .stats div,.flip-face.back .data-card{position:static;padding:26px 12px 20px;background:linear-gradient(180deg,#f7efdc,#efe3c6);border:1px solid rgba(27,35,80,.1);border-radius:14px;text-align:center;transform:none}
 .flip-face.back .stats b,.flip-face.back .data-card b{display:block;font-family:Georgia,serif;font-size:32px;color:#e85d26;font-weight:500;line-height:1.05;letter-spacing:-.01em}
